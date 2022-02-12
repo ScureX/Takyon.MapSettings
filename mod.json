@@ -1,0 +1,24 @@
+{
+	"Name": "Takyon.MapSettings",
+	"Description": "Set custom settings for each map, e.g. different match lengths depending on the map ",
+	"LoadPriority": 2,
+	"RequiredOnClient": false,
+	"Version": "1.0.0",
+
+	"Scripts": [
+		{
+			"Path": "takyon_mapsettings.nut",
+			"RunOn": "SERVER && MP",
+			"ServerCallback": {
+				"After": "MapSettingsInit"
+			}
+		},
+		{
+			"Path": "takyon_mapsettingsmain.nut",
+			"RunOn": "SERVER && MP",
+			"ServerCallback": {
+				"After": "MapSettingsMainInit"
+			}
+		}
+	]
+}
